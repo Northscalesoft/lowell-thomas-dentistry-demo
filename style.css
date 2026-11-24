@@ -1,0 +1,375 @@
+/* Lowell & Lorence Thomas Family Dentistry — navy + sky blue, family-practice look */
+
+:root {
+  --navy: #16324f;
+  --navy-dark: #0e2338;
+  --navy-soft: #2c4d6d;
+  --sky: #4ea8d8;
+  --sky-dark: #2f8cbd;
+  --sky-pale: #e3f1fa;
+  --sky-mist: #f2f8fc;
+  --ink: #1e2c3a;
+  --muted: #5b6f80;
+  --line: #d8e5ee;
+  --white: #ffffff;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--white);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3 {
+  font-family: var(--sans);
+  color: var(--navy);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  letter-spacing: -0.01em;
+}
+
+h2 { font-size: 2rem; text-align: center; }
+h3 { font-size: 1.2rem; }
+
+p { margin: 0 0 1em; }
+
+a { color: var(--sky-dark); }
+a:hover { color: var(--navy); }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.wrap.narrow { max-width: 720px; }
+
+.section-sub {
+  text-align: center;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+section { padding: 4rem 0; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--sky-dark);
+  margin-bottom: 0.75rem;
+}
+.eyebrow.center { text-align: center; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--navy);
+  border-bottom: 3px solid var(--sky);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.brand em { font-style: normal; color: var(--sky); }
+.brand-mark { flex: 0 0 auto; display: flex; }
+.brand-mark svg { display: block; }
+
+.main-nav { margin-left: auto; display: flex; gap: 1.25rem; }
+.main-nav a {
+  text-decoration: none;
+  color: #cfe3f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.main-nav a:hover { color: #fff; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  background: var(--sky);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  transition: background 0.15s ease;
+}
+.btn:hover { background: var(--sky-dark); color: #fff; }
+.btn-ghost {
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+.btn-ghost:hover { background: var(--navy); color: #fff; }
+.btn-small { padding: 0.55rem 1rem; font-size: 0.9rem; white-space: nowrap; }
+.btn-light { background: #fff; color: var(--navy); }
+.btn-light:hover { background: var(--sky-pale); color: var(--navy); }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 3.5rem 0 4rem;
+  background: linear-gradient(180deg, var(--sky-mist) 0%, #dcecf7 100%);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero h1 { font-size: 2.9rem; margin-bottom: 0.75rem; }
+.lead { font-size: 1.15rem; color: var(--navy-soft); }
+
+.hero-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1.5rem 0 1rem; }
+
+.office-line { font-size: 0.95rem; color: var(--muted); margin: 0; }
+.office-line a { font-weight: 700; }
+
+.hero-media { min-width: 0; }
+
+.hero-art {
+  position: relative;
+  height: 340px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--sky) 0%, var(--navy) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-art::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  top: -70px;
+  right: -60px;
+}
+.hero-art::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.10);
+  bottom: -60px;
+  left: -40px;
+}
+
+.hero-tooth { position: relative; z-index: 1; }
+
+.hero-chip {
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  color: var(--navy);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(14, 35, 56, 0.25);
+  white-space: nowrap;
+}
+.chip-1 { top: 22px; left: 20px; }
+.chip-2 { bottom: 62px; right: 18px; }
+.chip-3 { bottom: 20px; left: 24px; }
+
+/* ---------- Trust strip ---------- */
+.strip { padding: 0; background: var(--navy); }
+.strip-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 20px;
+}
+.strip-item strong { display: block; color: #fff; font-size: 1.05rem; }
+.strip-item span { color: #a9c6dc; font-size: 0.92rem; }
+
+/* ---------- About ---------- */
+.about { background: var(--white); }
+.about h2 { text-align: left; }
+.about p { color: var(--navy-soft); }
+
+/* ---------- Services ---------- */
+.services { background: var(--sky-mist); }
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 4px 14px rgba(22, 50, 79, 0.06);
+}
+.service-card h3 { margin: 0.75rem 0 0.4rem; }
+.service-card p { margin: 0; font-size: 0.95rem; color: var(--muted); }
+.service-icon svg { display: block; }
+
+/* ---------- Ages (illustrated gallery) ---------- */
+.age-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.age-card {
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(22, 50, 79, 0.06);
+}
+
+.age-art {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.age-kids .age-art { background: linear-gradient(135deg, #bfe3f5, #7cc4e8); }
+.age-adults .age-art { background: linear-gradient(135deg, #9cc8e6, var(--navy-soft)); }
+.age-seniors .age-art { background: linear-gradient(135deg, #d7ecf9, #a8d2ea); }
+.age-emoji { font-size: 4rem; line-height: 1; }
+
+.age-card figcaption { padding: 1rem 1.1rem 1.2rem; }
+.age-card figcaption strong { display: block; color: var(--navy); font-size: 1.1rem; margin-bottom: 0.25rem; }
+.age-card figcaption span { font-size: 0.92rem; color: var(--muted); }
+
+/* ---------- First-visit steps ---------- */
+.visit-steps { background: var(--sky-mist); }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.step {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--sky);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.step p { margin: 0; font-size: 0.95rem; color: var(--muted); }
+
+/* ---------- Contact ---------- */
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact .eyebrow { text-align: left; }
+.contact h2 { text-align: left; }
+.contact address { font-style: normal; line-height: 1.8; color: var(--navy-soft); margin-bottom: 1rem; }
+.contact address strong { color: var(--navy); }
+
+.hours { border-collapse: collapse; margin-bottom: 1rem; }
+.hours th, .hours td { padding: 0.35rem 1.25rem 0.35rem 0; text-align: left; font-weight: 400; }
+.hours th { color: var(--navy); font-weight: 700; }
+
+/* ---------- Contact CTA ---------- */
+.contact-cta {
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+}
+.contact-cta h2 { color: #fff; }
+.contact-cta p { color: #cfe3f0; }
+.contact-cta .cta-sub { margin: 1rem 0 0; font-size: 0.95rem; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--navy-dark);
+  color: #9db8cc;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.site-footer p { margin: 0; font-size: 0.9rem; }
+.site-footer a { color: #cfe3f0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .service-grid, .age-grid, .steps { grid-template-columns: repeat(2, 1fr); }
+  .main-nav { display: none; }
+  .header-inner .btn-small { margin-left: auto; }
+  .strip-inner { grid-template-columns: 1fr; gap: 0.75rem; padding-top: 1.25rem; padding-bottom: 1.25rem; }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  section { padding: 2.75rem 0; }
+  h2 { font-size: 1.6rem; }
+  .hero h1 { font-size: 1.9rem; }
+  .service-grid, .age-grid, .steps, .contact-inner { grid-template-columns: 1fr; }
+  .hero-art { height: 280px; }
+  .hero-tooth { width: 120px; height: 120px; }
+  .chip-1 { top: 16px; left: 14px; }
+  .chip-2 { bottom: 52px; right: 12px; }
+  .chip-3 { bottom: 14px; left: 16px; }
+  .hero-chip { font-size: 0.8rem; padding: 0.45rem 0.75rem; }
+  .brand { font-size: 0.95rem; }
+  .brand-mark svg { width: 28px; height: 28px; }
+  .header-inner .btn-small .call-num { display: none; }
+  .age-art { height: 150px; }
+}
